@@ -3,7 +3,9 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 import sqlite3
 
 # 🔑 BOT TOKEN
-BOT_TOKEN = "8228284067:AAGSCzoSkXvIxnyc-z2fvhUBaq0nxJiVtzY"
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 
 # ---------- DATABASE FUNCTIONS ----------
 
@@ -111,3 +113,4 @@ app.add_handler(CommandHandler("revision", revision))
 
 print("🔥 JEE Compass Bot Running...")
 app.run_polling()
+
